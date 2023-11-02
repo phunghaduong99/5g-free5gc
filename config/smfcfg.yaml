@@ -1,13 +1,13 @@
 info:
   version: 1.0.7
   description: SMF initial local configuration
-
+  debug: true
 configuration:
   smfName: SMF # the name of this SMF
   sbi: # Service-based interface information
     scheme: http # the protocol for sbi (http or https)
-    registerIPv4: 127.0.0.2 # IP used to register to NRF
-    bindingIPv4: 127.0.0.2 # IP used to bind the service
+    registerIPv4: 192.168.20.9 # IP used to register to NRF
+    bindingIPv4: 192.168.20.9 # IP used to bind the service
     port: 8000 # Port used to bind the service
     tls: # the local path of TLS key
       key: cert/smf.key # SMF TLS Certificate
@@ -94,5 +94,5 @@ configuration:
 
 logger: # log output setting
   enable: true # true or false
-  level: info # how detailed to output, value: trace, debug, info, warn, error, fatal, panic
-  reportCaller: false # enable the caller report or not, value: true or false
+  level: debug # how detailed to output, value: trace, debug, info, warn, error, fatal, panic
+  reportCaller: true # enable the caller report or not, value: true or false
